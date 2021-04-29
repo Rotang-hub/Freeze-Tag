@@ -1,0 +1,6 @@
+name: IceIce
+version: 1.0
+main: rotang.IceIce.IceIce
+
+commands:
+  ice:
