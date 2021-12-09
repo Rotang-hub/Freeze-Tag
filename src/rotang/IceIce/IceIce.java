@@ -36,8 +36,8 @@ public class IceIce extends JavaPlugin
 				int minute = Integer.parseInt(args[2]);
 				int second = Integer.parseInt(args[3]);
 				
-				sender.sendMessage(ChatColor.GREEN + "[Ice] Á¦ÇÑ½Ã°£À» " + ChatColor.YELLOW 
-						+ hour + "½Ã°£ " + minute + "ºĞ " + second + "ÃÊ" + ChatColor.GREEN + "·Î ¼³Á¤Çß½À´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] ì œí•œì‹œê°„ì„ " + ChatColor.YELLOW 
+						+ hour + "ì‹œê°„ " + minute + "ë¶„ " + second + "ì´ˆ" + ChatColor.GREEN + "ë¡œ ì„¤ì •í–ˆìŠµë‹ˆë‹¤.");
 				
 				manager.timer.setTime(hour, minute, second);
 			}
@@ -45,13 +45,13 @@ public class IceIce extends JavaPlugin
 			if(args[0].equalsIgnoreCase("start"))
 			{
 				manager.start();
-				sender.sendMessage(ChatColor.GREEN + "[Ice] °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
 			}
 			
 			if(args[0].equalsIgnoreCase("stop"))
 			{
 				manager.stop();
-				sender.sendMessage(ChatColor.GREEN + "[Ice] °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			}
 			
 			if(args[0].equalsIgnoreCase("tagger"))
@@ -67,11 +67,11 @@ public class IceIce extends JavaPlugin
 						taggerList = taggerList + tagger.getName() + ", ";
 					}
 					
-					sender.sendMessage(ChatColor.GREEN + "[Ice] ¼ú·¡: " + ChatColor.YELLOW + taggerList);
+					sender.sendMessage(ChatColor.GREEN + "[Ice] ìˆ ë˜: " + ChatColor.YELLOW + taggerList);
 					return false;
 				}
 				
-				sender.sendMessage(ChatColor.GREEN + "[Ice] ´ÙÀ½ ÇÃ·¹ÀÌ¾îµéÀ» ¼ú·¡ ¸ñ·Ï¿¡ Ãß°¡Çß½À´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] ë‹¤ìŒ í”Œë ˆì´ì–´ë“¤ì„ ìˆ ë˜ ëª©ë¡ì— ì¶”ê°€í–ˆìŠµë‹ˆë‹¤.");
 				for(int i = 1; i < length; i++)	//Put Player
 				{
 					Player tagger = getServer().getPlayer(args[i]);
@@ -98,11 +98,11 @@ public class IceIce extends JavaPlugin
 						runnerList = runnerList + runner.getName() + ", ";
 					}
 					
-					sender.sendMessage(ChatColor.GREEN + "[Ice] ·¯³Ê: " + ChatColor.YELLOW + runnerList);
+					sender.sendMessage(ChatColor.GREEN + "[Ice] ëŸ¬ë„ˆ: " + ChatColor.YELLOW + runnerList);
 					return false;
 				}
 				
-				sender.sendMessage(ChatColor.GREEN + "[Ice] ´ÙÀ½ ÇÃ·¹ÀÌ¾îµéÀ» ·¯³Ê ¸ñ·Ï¿¡ Ãß°¡Çß½À´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] ë‹¤ìŒ í”Œë ˆì´ì–´ë“¤ì„ ëŸ¬ë„ˆ ëª©ë¡ì— ì¶”ê°€í–ˆìŠµë‹ˆë‹¤.");
 				for(int i = 1; i < length; i++)	//Put Player
 				{
 					Player runner = getServer().getPlayer(args[i]);
@@ -118,13 +118,13 @@ public class IceIce extends JavaPlugin
 			
 			if(args[0].equalsIgnoreCase("help"))
 			{
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice tagger: ÇöÀç ¼ú·¡ÀÎ ÇÃ·¹ÀÌ¾îµéÀ» È®ÀÎÇÕ´Ï´Ù.");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice tagger [player] [player]...: ÇÃ·¹ÀÌ¾îµéÀ» ¼ú·¡·Î ¼³Á¤ÇÕ´Ï´Ù.");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice runner: ÇöÀç ·¯³ÊÀÎ ÇÃ·¹ÀÌ¾îµéÀ» È®ÀÎÇÕ´Ï´Ù.");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice runner [player] [player]...: ");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice settime: ÇÃ·¹ÀÌ¾îµéÀ» ·¯³Ê·Î ¼³Á¤ÇÕ´Ï´Ù");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice start: °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.");
-				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice stop: °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice tagger: í˜„ì¬ ìˆ ë˜ì¸ í”Œë ˆì´ì–´ë“¤ì„ í™•ì¸í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice tagger [player] [player]...: í”Œë ˆì´ì–´ë“¤ì„ ìˆ ë˜ë¡œ ì„¤ì •í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice runner: í˜„ì¬ ëŸ¬ë„ˆì¸ í”Œë ˆì´ì–´ë“¤ì„ í™•ì¸í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice runner [player] [player]...: í”Œë ˆì´ì–´ë“¤ì„ ëŸ¬ë„ˆë¡œ ì„¤ì •í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice settime: ê²Œì„ ì‹œê°„ì„ ì„¤ì •í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice start: ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
+				sender.sendMessage(ChatColor.GREEN + "[Ice] /ice stop: ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			}
 		}
 		
