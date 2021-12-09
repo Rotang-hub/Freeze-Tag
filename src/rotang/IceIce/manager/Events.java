@@ -22,7 +22,7 @@ public class Events implements Listener
 	}
 	
 	@EventHandler
-	public void onBlockPlaceEvent(BlockPlaceEvent event)
+	public void onBlockPlace(BlockPlaceEvent event)
 	{
 		ItemStack item = event.getItemInHand();
 		
@@ -31,7 +31,7 @@ public class Events implements Listener
 	}
 	
 	@EventHandler
-	public void onPlayerInteractEvent(PlayerInteractEvent event)
+	public void onPlayerInteract(PlayerInteractEvent event)
 	{
 		Player player = event.getPlayer();
 		ItemStack item = player.getInventory().getItemInMainHand();
@@ -61,7 +61,7 @@ public class Events implements Listener
 					}
 					else
 					{
-						player.sendMessage(ChatColor.RED + "¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+						player.sendMessage(ChatColor.RED + "ì•„ì´í…œì„ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 					}
 				}
 			}
